@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20180422TOFDetection", "20180422TOFDetection\20180422TOFDetection.csproj", "{DD27527A-50C8-4C1B-8B30-9D18393A177B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOFDetection", "20180422TOFDetection\TOFDetection.csproj", "{DD27527A-50C8-4C1B-8B30-9D18393A177B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -22,6 +22,8 @@ using System.Timers;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
+
+
 namespace _20180422TOFDetection
 {
     public partial class Form1 : Form
@@ -63,7 +65,9 @@ namespace _20180422TOFDetection
 
         int[,] srcImgData = new int[252, 328]; //目标图片原始数据 用来渲染
         int[,] backImgData = new int[252, 328]; //背景图片原始数据 用来渲染
-
+        int mindepth =0;
+        int maxdepth = 30000;
+       
 
         //连通域处理过程中全局变量
         ushort[,] newsignall = new ushort[252, 328];
@@ -1920,23 +1924,48 @@ namespace _20180422TOFDetection
         {
             double h = 0;
             double flag = 0;
-            if (value > 0 && value < 2999)   // h  225-255
+            //if (value > 0 && value < 2999)   // h  225-255
+            //{
+            //    flag = value / 100;
+            //    h = 225 + flag;//flag+225
+            //}
+            //else if (value < 20000)   // h 0-169
+            //{
+            //    flag = value / 100;
+            //    h = flag - 30;///flag-30
+            //}
+            //else if (value < 30000)    // h 170-224
+            //{
+            //    flag = (value - 20000) / 185;
+            //    h = flag + 170;///flag+170
+            //}
+            //h = h * 360 / 255;
+            //return h;
+            if(value<mindepth)
             {
-                flag = value / 100;
-                h = 225 + flag;//flag+225
+                value = mindepth;
             }
-            else if (value < 20000)   // h 0-169
+            if(value>maxdepth)
             {
-                flag = value / 100;
-                h = flag - 30;///flag-30
+                value = maxdepth;
             }
-            else if (value < 30000)    // h 170-224
-            {
-                flag = (value - 20000) / 185;
-                h = flag + 170;///flag+170
-            }
-            h = h * 360 / 255;
+            //int Fintervaldistance = (maxdepth - mindepth) / 10+mindepth;
+            //int Sintervaldistance = (maxdepth - mindepth) / 3+mindepth;
+            //if(value>mindepth&&value<Fintervaldistance)   
+            //{
+
+            //}
+            //else if(value<Sintervaldistance)           
+            //{
+
+            //}
+            //else if(value<maxdepth)               
+            //{
+
+            //}
+            h = (value-mindepth) * 360/ (maxdepth - mindepth);
             return h;
+
         }
 
 
@@ -2247,6 +2276,32 @@ namespace _20180422TOFDetection
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void colorbutton_Click(object sender, EventArgs e)
+        {
+            maxdepth = Convert.ToInt32(textBox16.Text);
+            mindepth = Convert.ToInt32(textBox17.Text); 
         }
 
 
