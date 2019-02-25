@@ -1,0 +1,9 @@
+E:\Git Library\--csharp--\20180422TOFDetection\bin\Debug\20180422TOFDetection.exe.config
+E:\Git Library\--csharp--\20180422TOFDetection\bin\Debug\20180422TOFDetection.exe
+E:\Git Library\--csharp--\20180422TOFDetection\bin\Debug\20180422TOFDetection.pdb
+E:\Git Library\--csharp--\20180422TOFDetection\obj\Debug\TOFDetection.csprojResolveAssemblyReference.cache
+E:\Git Library\--csharp--\20180422TOFDetection\obj\Debug\_20180422TOFDetection.Form1.resources
+E:\Git Library\--csharp--\20180422TOFDetection\obj\Debug\_20180422TOFDetection.Properties.Resources.resources
+E:\Git Library\--csharp--\20180422TOFDetection\obj\Debug\TOFDetection.csproj.GenerateResource.Cache
+E:\Git Library\--csharp--\20180422TOFDetection\obj\Debug\20180422TOFDetection.exe
+E:\Git Library\--csharp--\20180422TOFDetection\obj\Debug\20180422TOFDetection.pdb
